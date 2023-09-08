@@ -16,7 +16,8 @@ void ABRPGPlayerController::SetupInputComponent()
 	InputComponent->BindAxis(TEXT("MoveFront"), this, &ABRPGPlayerController::MoveFrontKey);
     InputComponent->BindAxis(TEXT("MoveSide"), this, &ABRPGPlayerController::MoveSideKey);
 	
-	//InputComponent->BindAction(TEXT("CameraRotationEnable"),EInputEvent::IE_Pressed,this, &ABRPGPlayerController::CameraRotationOn);
+	InputComponent->BindAction(TEXT("CameraRotationEnable"),EInputEvent::IE_Pressed,this, &ABRPGPlayerController::CameraRotationOn);
+
 
 }
 
@@ -30,4 +31,8 @@ void ABRPGPlayerController::MoveFrontKey(float _Scale)
 void ABRPGPlayerController::MoveSideKey(float _Scale)
 {
 	GetPawn()->AddMovementInput(GetPawn()->GetActorRightVector(), _Scale);
+}
+
+void ABRPGPlayerController::CameraRotationOn(float _Scale)
+{
 }

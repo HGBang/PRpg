@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "Delegates/DelegateSignatureImpl.inl"
 #include "EngineMinimal.h"
 #include "EngineGlobals.h"
 #include "Engine.h"

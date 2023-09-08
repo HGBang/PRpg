@@ -25,5 +25,7 @@ protected:
 private:
 	void MoveFrontKey(float _Scale);
 	void MoveSideKey(float _Scale);
+	void CameraRotationOn(float _Scale);
+
 	
 };
